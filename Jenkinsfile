@@ -14,26 +14,24 @@ pipeline {
         stage('Test') {
 	    when{
 	    expression {
-	    $BRANCH_NAME == "main"
+	    '${BRANCH_NAME}' == "main"
 	    }
 	    }
 	    steps {
                sh 'echo "this is test stage"'
             }
-	
+	}
         stage('Deploy') {
             steps {
                sh 'echo "this is deploy stage"'
             }
         }
-    
+    }
     post{
     always{
     sh 'echo "this is POST BLOCK for testing"'
 }
-} 
- }  
- }
 }
+ }  
 
 
