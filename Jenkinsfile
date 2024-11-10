@@ -21,20 +21,20 @@ pipeline {
 	    steps {
                sh 'echo "this is test stage"'
             }
-	}
+	
         stage('Deploy') {
             steps {
-               sh 'echoi "this is deploy stage"'
+               sh 'echo "this is deploy stage"'
             }
         }
-    }
+    
     post{
     always{
     sh 'echo "this is POST BLOCK for testing"'
 }
 } 
  }  
- 
-
+ }
+}
 
 
