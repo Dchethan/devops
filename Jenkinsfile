@@ -1,4 +1,4 @@
-pipipeline {
+pipeline {
     agent any
     environment{
         testvarible = "custom_varible_defined"
