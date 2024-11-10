@@ -11,7 +11,6 @@ pipeline {
 		sh "echo this is custom env varible -> ${testvarible}"
             }
         }
-
         stage('Test') {
 	    when{
 	    expression {
