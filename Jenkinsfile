@@ -1,4 +1,4 @@
-pipeline {
+pipipeline {
     agent any
     environment{
         testvarible = "custom_varible_defined"
@@ -7,14 +7,14 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "this is build stage"'
-		sh "echo jenkines home path -> ${BRANCH_NAME}"
-		sh "echo this is custom env varible -> ${testvarible}"
+		sh "echo jenkins home path -> ${BRANCH_NAME}"
+		sh "echo this is custom env varible -> ${testvariable}"
             }
         }
         stage('Test') {
 	    when{
 	    expression {
-	    '${BRANCH_NAME}' == "main"
+	    BRANCH_NAME == "main"
 	    }
 	    }
 	    steps {
