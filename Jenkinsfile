@@ -8,13 +8,13 @@ pipeline {
             steps {
                 sh 'echo "this is build stage"'
 		//sh "echo jenkins home path -> ${BRANCH_NAME}"
-		sh "'echo this is custom env variable -> env.testvariable'
+		sh "echo this is custom env variables-> ${testvariable}"
             }
         }
         stage('Test') {
 	    when{
 	    expression {
-	    BRANCH_NAME == "main"
+	     branch 'main'
 	    }
 	    }
 	    steps {
