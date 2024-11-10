@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    enviroment{
+    environment{
         testvarible = "custom_varible_defined"
 	}
     stages {
