@@ -7,8 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "this is build stage"'
-		sh "echo jenkins home path -> ${BRANCH_NAME}"
-		sh "echo this is custom env variable -> ${testvariable}"
+		//sh "echo jenkins home path -> ${BRANCH_NAME}"
+		sh 'echo this is custom env variable -> testvariable'
             }
         }
         stage('Test') {
