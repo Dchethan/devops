@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment{
-        testvarible = "custom_varible_defined"
+        testvariable = "custom_variable_defined"
 	}
     stages {
         stage('Build') {
